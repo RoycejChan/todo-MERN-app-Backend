@@ -6,7 +6,7 @@ const toDo = require('../models/toDoScheme');
 // @route GET /ToDoList
 const getToDos = async(req, res) => {
 
-    console.log("At the home page");
+    console.log("At the homee page");
 
     const todo = await toDo.find();
     console.log("Fetched todossss", todo);

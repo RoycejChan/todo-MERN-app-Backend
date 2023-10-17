@@ -3,10 +3,10 @@ const cors = require('cors')
 const mongoose = require('mongoose');
 app = express();
 app.use(express.json({ extended: true }));
-app.use((express.urlencoded({ extended: false })));
+app.use(express.urlencoded({ extended: false }));
 app.use(
 	cors({
-	  origin: ["http://localhost:5173", "https://mern-todotask-app.onrender.com/"],
+	  origin: ["http://localhost:5173", "https://mern-todotask-app.onrender.com"],
 	})
   );
 const port = 9999;
