@@ -24,7 +24,7 @@ mongoose.connect(dbURL, {
 const toDo = require('./models/toDoScheme');
 
 //IMPORT ROUTES
-app.use('/ToDoList', require('./routes/toDoRoutes'));
+app.use('/', require('./routes/toDoRoutes'));
 
 
 app.listen(9999, () => {console.log(`Listening on port ${port}`)});
