@@ -5,8 +5,10 @@ app = express();
 app.use(express.json({ extended: true }));
 app.use((express.urlencoded({ extended: false })));
 app.use(
-	cors()
-	);
+	cors({
+	  origin: ["http://localhost:5173", "https://mern-todotask-app.onrender.com/"],
+	})
+  );
 const port = 9999;
 const dbURL = 'mongodb+srv://RoyceChan:BlacknWhite@cluster0.n0hpspp.mongodb.net/tasks';
 
