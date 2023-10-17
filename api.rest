@@ -1,0 +1,23 @@
+GET http://localhost:9999/ToDoList HTTP/1.1
+
+###
+
+POST http://localhost:9999/ToDoList/new
+Content-Type: application/json
+
+{
+	"text": "get groceries"
+}
+
+###
+
+DELETE http://localhost:9999/ToDoList/delete/652af9774c5d11b25d15a5cf
+
+###
+
+PUT http://localhost:9999/ToDoList/edit/652af9ddf743e7106ab8e01d
+Content-Type: application/json
+
+{
+	"text": "just get bananas at grocery store"
+}
