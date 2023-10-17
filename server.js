@@ -2,16 +2,20 @@ const express = require('express');
 const cors = require('cors')
 const mongoose = require('mongoose');
 app = express();
-app.use(express.json({ extended: true }))
-app.use(cors());
+app.use(express.json({ extended: true }));
+app.use((express.urlencoded({ extended: false })));
+app.use(
+	cors()
+	);
 const port = 9999;
-const dbURL = 'mongodb://127.0.0.1:27017/';
+const dbURL = 'mongodb+srv://RoyceChan:BlacknWhite@cluster0.n0hpspp.mongodb.net/tasks';
 
 mongoose.connect(dbURL, {
-	useNewUrlParser: true, 
+	useNewUrlParser: true,
 	useUnifiedTopology: true 
-}).then(console.log("Connected to DB"));
-
+  }).then(() => {
+	console.log("Connected to DB");
+  });
 // END HEADER
 
 //IMPORT TO DO SCHEMA
